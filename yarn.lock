@@ -2046,6 +2046,11 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/avatar/-/avatar-2.2.1.tgz#c3c5262ffac596510cced450dad22df6dbb1c040"
   integrity sha512-SkJrIHdOoEq5+rLI2mBRSXmC8mbcY4nFYnl78rAA/5/kYhjpetLkyOBggVz+7r00AkfmSNmqOIZJPELA+Pu8aQ==
 
+"@twilio-paste/badge@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/badge/-/badge-7.0.0.tgz#355d9859178833d665c186c9f2e6bfc73f500f20"
+  integrity sha512-rxpPRnMt+CYVI8Iw+tGWpw9rP1RLk7etcCcCsSozKJuZUih6FBlg8xjR9ODEqE1IDKQpn9LNT/+JCBI3Y2DGuQ==
+
 "@twilio-paste/base-radio-checkbox@^6.0.3":
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/@twilio-paste/base-radio-checkbox/-/base-radio-checkbox-6.0.5.tgz#440a90793ac82515ea03e9994c5fa4d0e9374417"
@@ -2080,6 +2085,14 @@
   version "6.1.3"
   resolved "https://registry.yarnpkg.com/@twilio-paste/checkbox/-/checkbox-6.1.3.tgz#b47d84fff4be560ccee531aa9d61c91cf4d3f814"
   integrity sha512-9iOJMPH/iArIYOY4gIi+yN+1y1AKrif4+VqrqyKUtp62mpj9vR27B1C/wz8JyTSYxdLlbBrNtgf8RFclk7WBBg==
+
+"@twilio-paste/color-contrast-utils@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/color-contrast-utils/-/color-contrast-utils-4.0.0.tgz#3e1c4aaeabdcfec32ac3425cc0ff2c574424d1da"
+  integrity sha512-l4J793HdxBe//N2pKPGjWsjvWG++UDblaxen48/g72p2nNQk8uzPbOoV0JjvJ+RjajX9k/S5ryRHPAtGQUx4MA==
+  dependencies:
+    color-combos "1.0.12"
+    lodash "4.17.21"
 
 "@twilio-paste/combobox-primitive@^0.2.4":
   version "0.2.4"
@@ -4239,7 +4252,15 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.9.0, color-convert@^1.9.3:
+color-combos@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/color-combos/-/color-combos-1.0.12.tgz#7064dc134dcf12b5d275e388de045d58e3c88d82"
+  integrity sha512-XdjOp4KYIBhOY3TqW+eMmOoNxiRufwre41YkUdEkk/9WGlY76RvPWK04FL7ig208ACvj4MCHIB8GrURyljdp4g==
+  dependencies:
+    color "3.1.3"
+    lodash.uniq "4.5.0"
+
+color-convert@^1.9.0, color-convert@^1.9.1, color-convert@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
@@ -4263,13 +4284,21 @@ color-name@^1.0.0, color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-string@^1.6.0:
+color-string@^1.5.4, color-string@^1.6.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.9.1.tgz#4467f9146f036f855b764dfb5bf8582bf342c7a4"
   integrity sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
+
+color@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.1.3.tgz#ca67fb4e7b97d611dcde39eceed422067d91596e"
+  integrity sha512-xgXAcTHa2HeFCGLE9Xs/R82hujGtu9Jd9x4NW3T34+OMs7VoPsjwzRczKHvTAHeJwWFwX5j15+MgAppE8ztObQ==
+  dependencies:
+    color-convert "^1.9.1"
+    color-string "^1.5.4"
 
 color@^3.0.0:
   version "3.2.1"
@@ -8219,12 +8248,12 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==
 
-lodash.uniq@^4.5.0:
+lodash.uniq@4.5.0, lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
 
-"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
+lodash@4.17.21, "lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
