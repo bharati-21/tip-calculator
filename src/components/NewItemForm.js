@@ -1,8 +1,10 @@
 import { Box, Button, Input, Label } from '@twilio-paste/core';
 import { useState } from 'react';
+// import { addNewItem } from '../store/items/actions';
 
+// export const NewItemForm = ({ onSubmit, dispatch }) => {
 export const NewItemForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
+    const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
 
   const isValid = () => {
@@ -17,6 +19,8 @@ export const NewItemForm = ({ onSubmit }) => {
     if (typeof onSubmit === 'function') {
       onSubmit(name, price);
     }
+
+    // dispatch(addNewItem(name, price));
 
     setName('');
     setPrice(0);
